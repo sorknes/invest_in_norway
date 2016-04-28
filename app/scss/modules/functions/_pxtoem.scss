@@ -1,0 +1,16 @@
+// Helper to convert the designers' px specifications into EMs
+@function em( $px, $basePx: $baseFontPx ) {
+    $px: $px / ($px * 0 + 1);
+    $basePx: $basePx / ($basePx * 0 + 1);
+    @return $px / $basePx * 1em;
+}
+$baseFontPx: 16px;
+
+// Example
+// H1 {
+//     font-size: em(32px);
+//     margin: em(10) em(50);
+//     SMALL {
+//         font-size: em(28px,32px);
+//     }
+// }

@@ -1,0 +1,33 @@
+/// Block Element
+/// @access public
+/// @param {String} $element - Element's name
+@mixin e($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+/// Block Modifier
+/// @access public
+/// @param {String} $modifier - Modifier's name
+@mixin m($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+// .block {
+//     /* CSS declarations for `.block` */
+//
+//     @include e('element') {
+//         /* CSS declarations for `.block__element` */
+//     }
+//
+//     @include m('modifier') {
+//         /* CSS declarations for `.block--modifier` */
+//
+//         @include e('element') {
+//             /* CSS declarations for `.block--modifier__element` */
+//         }
+//     }
+// }
