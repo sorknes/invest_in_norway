@@ -5,4 +5,8 @@
 @import "functions/pxtoem";
 
 // Mixins
-@import "mixins/bem";
+@import "mixins/animations";
+
+// Variables
+@import "variables/breakpoints";
+@import "variables/heights";

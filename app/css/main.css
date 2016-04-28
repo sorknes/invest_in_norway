@@ -5754,17 +5754,84 @@ button.close {
     display: none !important; } }
 
 html {
+  min-height: 100%;
   font-size: 100%;
+  position: relative;
   overflow-y: scroll;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
 body {
-  height: 100%;
-  min-height: 100%;
-  padding: 0;
-  margin: 0;
+  padding: 80px 0 0 0;
+  margin: 0 0 60px 0;
   color: #1c2e36;
   font-family: "Fira Sans", sans-serif;
   font-size: 1rem;
+  font-weight: 300;
   line-height: 1.5; }
+
+a {
+  color: #1c2e36;
+  text-decoration: underline;
+  transition: all 300ms ease-in-out; }
+  a:hover, a:focus {
+    color: #ef5a3b; }
+
+header {
+  width: auto;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  right: 40px;
+  left: 40px;
+  z-index: 9999;
+  transition: all 300ms ease-in-out; }
+  header a {
+    text-decoration: none; }
+
+.navbar {
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0; }
+  .navbar.navbar-default {
+    height: 80px;
+    background-color: #196495; }
+    .navbar.navbar-default .navbar-brand {
+      height: 80px;
+      padding: 0 20px;
+      color: #fff;
+      font-size: 24px;
+      line-height: 80px;
+      letter-spacing: 1px; }
+      .navbar.navbar-default .navbar-brand span {
+        font-weight: 500;
+        text-transform: uppercase; }
+    .navbar.navbar-default .navbar-collapse {
+      border-top: none;
+      box-shadow: none;
+      background-color: #196495; }
+      .navbar.navbar-default .navbar-collapse .navbar-nav {
+        margin: 0 -15px; }
+      .navbar.navbar-default .navbar-collapse .navbar-nav > li > a {
+        color: #fff; }
+
+@media (min-width: 768px) {
+  .navbar.navbar-default .navbar-collapse .nav > li > a {
+    padding: 0 40px; }
+  .navbar.navbar-default .navbar-collapse .navbar-nav {
+    margin-top: 20px; }
+  .navbar.navbar-default .navbar-collapse .navbar-nav > li {
+    border-left: 1px solid rgba(255, 255, 255, 0.5); }
+  .navbar.navbar-default .navbar-collapse .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px; } }
+
+.nav-up {
+  top: -80px; }
+
+.footer {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1); }

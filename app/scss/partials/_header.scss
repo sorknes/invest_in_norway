@@ -1,0 +1,82 @@
+header {
+    width: auto;
+    height: $header-height;
+    position: fixed;
+    top: 0; right: 40px; left: 40px;
+    z-index: 9999;
+
+    @include transition($default);
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.navbar {
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0;
+
+    &.navbar-default {
+        height: $header-height;
+        background-color: $brand-color;
+
+        .navbar-brand {
+            height: $header-height;
+            padding: 0 20px;
+            color: #fff;
+            font-size: 24px;
+            line-height: $header-height;
+            letter-spacing: 1px;
+
+            span {
+                font-weight: $base-bold;
+                text-transform: uppercase;
+            }
+        }
+
+        .navbar-collapse {
+            border-top: none;
+            box-shadow: none;
+            background-color: $brand-color;
+
+            .navbar-nav {
+                margin: 0 -15px;
+            }
+
+            .navbar-nav > li > a {
+                color: #fff;
+            }
+        }
+    }
+}
+
+@media (min-width: $screen-sm-min) {
+    .navbar {
+        &.navbar-default {
+            .navbar-collapse {
+
+                .nav > li > a {
+                    padding: 0 40px;
+                }
+
+                .navbar-nav {
+                    margin-top: 20px;
+                }
+
+                .navbar-nav > li {
+                    border-left: 1px solid rgba(255, 255, 255, 0.5);
+                }
+
+                .navbar-nav > li > a {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+.nav-up {
+    top: -$header-height;
+}

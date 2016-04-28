@@ -1,0 +1,10 @@
+@mixin transition($default) {
+    transition: all $default ease-in-out
+}
+
+// Transition timing
+$instant:   100ms;
+$fast:      200ms;
+$default:   300ms;
+$easy:      500ms;
+$slow:      800ms;
