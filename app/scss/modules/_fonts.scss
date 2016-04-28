@@ -6,7 +6,7 @@
 $base-regular: 300;
 $base-bold: 500;
 
-// Headings Font weights
+// Header Font weights
 $header-regular: 400;
 $header-bold: 700;
 
@@ -16,11 +16,11 @@ $base-font-weight: $base-regular;
 $base-font-size: 1rem;
 $base-line-height: 1.5;
 
+// Header Font
+$header-font-family: 'Alegreya', serif;
+$header-font-weight: $header-regular;
+
 // Fixed Font (meta)
 $fixed-font-family: monospace;
 $fixed-font-size: 85%;
 $fixed-line-height: $base-line-height;
-
-// Header Font
-$header-font-family: 'Alegreya', serif;
-$header-font-weight: $header-regular;
