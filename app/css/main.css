@@ -5,6 +5,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:300,300italic,500,500italic);
+@import url(https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700,700italic);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5763,6 +5765,6 @@ body {
   padding: 0;
   margin: 0;
   color: #000000;
-  font-family: sans-serif;
+  font-family: "Fira Sans", sans-serif;
   font-size: 1rem;
   line-height: 1.5; }
