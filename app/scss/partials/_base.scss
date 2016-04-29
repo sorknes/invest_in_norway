@@ -1,7 +1,10 @@
 @import "modules/all";
 
+html, body {
+    height: 100%;
+}
+
 html {
-    // height: 100%;
     min-height: 100%;
     font-size: 100%;
     position: relative;
@@ -11,13 +14,18 @@ html {
 }
 
 body {
-    padding: $header-height 0 0 0;
+    padding: 0;
     margin: 0 0 $footer-height 0;
     color: $base-color;
     font-family: $base-font-family;
     font-size: $base-font-size;
     font-weight: $base-regular;
     line-height: $base-line-height;
+    background-color: $black-5;
+}
+
+.page {
+    height: 50%;
 }
 
 a {

@@ -2,8 +2,8 @@ header {
     width: auto;
     height: $header-height;
     position: fixed;
-    top: 0; right: 40px; left: 40px;
-    z-index: 9999;
+    top: 0; right: 5px; left: 10px;
+    z-index: 200;
 
     @include transition($default);
 
@@ -19,35 +19,71 @@ header {
 
     &.navbar-default {
         height: $header-height;
-        background-color: $brand-color;
+        background-color: rgba(255, 255, 255, 0);
 
         .navbar-brand {
             height: $header-height;
             padding: 0 20px;
-            color: #fff;
+            margin-left: 0;
+            color: rgba(255, 255, 255, 0.50);
             font-size: 24px;
             line-height: $header-height;
             letter-spacing: 1px;
+            text-transform: none;
+            background-color: $brand-color;
 
             span {
+                color: rgba(255, 255, 255, 1);
                 font-weight: $base-bold;
                 text-transform: uppercase;
+            }
+
+            &:hover, &:focus {
+                background-color: $base-color;
             }
         }
 
         .navbar-collapse {
             border-top: none;
             box-shadow: none;
-            background-color: $brand-color;
+            background-color: #fff;
 
             .navbar-nav {
-                margin: 0 -15px;
-            }
+                & > li > a {
+                    padding: 0 30px;
+                    color: $base-color;
+                    font-size: 100%;
+                    letter-spacing: 1px;
 
-            .navbar-nav > li > a {
-                color: #fff;
+                    &:hover, &:focus {
+                        color: $accent-color;
+                        box-shadow: inset 0 -4px 0 0 $accent-color;
+                    }
+                }
+
+                & > .open > a {
+                    background-color: #fff;
+                }
+
+                & > .active > a {
+                    color: $accent-color;
+                    background-color: transparent;
+                }
+
+                .dropdown-menu {
+                    border: none;
+                    border-radius: 0;
+                    box-shadow: none;
+                }
             }
         }
+    }
+
+    .well {
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background-color: $base-color;
     }
 }
 
@@ -55,22 +91,23 @@ header {
     .navbar {
         &.navbar-default {
             .navbar-collapse {
-
-                .nav > li > a {
-                    padding: 0 40px;
-                }
-
                 .navbar-nav {
-                    margin-top: 20px;
-                }
-
-                .navbar-nav > li {
-                    border-left: 1px solid rgba(255, 255, 255, 0.5);
+                    margin: 0;
                 }
 
                 .navbar-nav > li > a {
-                    padding-top: 10px;
-                    padding-bottom: 10px;
+                    height: $header-height;
+                    line-height: $header-height;
+                }
+
+                .navbar-nav > li:not(:last-child) > a::after {
+                    width: 1px;
+                    height: 30px;
+                    margin-top: -15px;
+                    content: '';
+                    position: absolute;
+                    top: 50%; right: 0px;
+                    background-color: $black-10;
                 }
             }
         }

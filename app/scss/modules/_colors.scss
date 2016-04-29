@@ -1,11 +1,14 @@
 // Base colors
 $base-color: rgba(28, 46, 54, 1);
-$base-color-50: rgba(28, 46, 54, 0.5);
+$base-color-50: rgba(28, 46, 54, 0.50);
 $base-color-25: rgba(28, 46, 54, 0.25);
 $base-color-10: rgba(28, 46, 54, 0.10);
 
-// Complementary colors
+// Brand colors
 $brand-color: rgba(25, 100, 149, 1);
+$brand-color-50: rgba(25, 100, 149, 0.50);
+
+// Complementary colors
 $accent-color: rgba(239, 90, 59, 1);
 
 // Black colors
@@ -13,3 +16,4 @@ $black: #000000;
 $black-50: rgba(#000000, 0.50);
 $black-25: rgba(#000000, 0.25);
 $black-10: rgba(#000000, 0.10);
+$black-5: rgba(#000000, 0.05);

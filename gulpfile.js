@@ -10,6 +10,11 @@ var autoprefixer = require('gulp-autoprefixer');
 // Requires the gulp-sass plugin
 var sass = require('gulp-sass');
 
+// SVG
+var svgstore = require('gulp-svgstore');
+var svgmin = require('gulp-svgmin');
+var path = require('path');
+
 // Include browser-sync
 var browserSync = require('browser-sync').create();
 
@@ -80,6 +85,23 @@ gulp.task('images', function() {
         })))
         .pipe(gulp.dest('dist/images'))
 });
+
+// gulp.task('svgstore', function () {
+//     return gulp.src('app/images/svg/*.svg')
+//         .pipe(svgmin(function (file) {
+//             var prefix = path.basename(file.relative, path.extname(file.relative));
+//             return {
+//                 plugins: [{
+//                     cleanupIDs: {
+//                         prefix: prefix + '-',
+//                         minify: true
+//                     }
+//                 }]
+//             }
+//         }))
+//         .pipe(svgstore())
+//         .pipe(gulp.dest('dist/images'));
+// });
 
 gulp.task('fonts', function() {
     return gulp.src('app/fonts/**/*')
