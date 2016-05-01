@@ -37,7 +37,7 @@
             background-image: url('../images/svg/icon-close.svg');
         }
 
-        &.collapsed:hover::before {
+        &.collapsed:hover::before, &.collapsed:focus::before {
             background-color: $base-color;
         }
     }

@@ -5790,7 +5790,7 @@ header {
   position: fixed;
   top: 0;
   right: 5px;
-  left: 10px;
+  left: 5px;
   z-index: 200;
   transition: all 300ms ease-in-out; }
   header a {
@@ -5902,7 +5902,7 @@ header {
     .btn.btn-search::before {
       background-color: #1c2e36;
       background-image: url("../images/svg/icon-close.svg"); }
-    .btn.btn-search.collapsed:hover::before {
+    .btn.btn-search.collapsed:hover::before, .btn.btn-search.collapsed:focus::before {
       background-color: #1c2e36; }
 
 .jumbotron {
