@@ -1,15 +1,44 @@
 .btn {
-    border: none;
+    padding: 10px 40px 6px 40px;
+    font-size: 16px;
+    font-weight: $base-regular;
+    text-decoration: none;
+    letter-spacing: 2px;
+    border-width: 2px;
     border-radius: 0;
+    background-color: transparent;
 
     @include transition($instant);
 
+    &.btn-default {
+        color: $accent-color;
+        text-transform: uppercase;
+        border-color: $accent-color;
+
+        &:hover, &:focus {
+            color: #fff;
+            background-color: $accent-color;
+        }
+    }
+
     &.btn-search {
+        margin-left: 20px;
+        color: #fff;
+        border-color: #fff;
+
+        &:hover, &:focus {
+            border-color: $accent-color;
+        }
+    }
+
+    &.btn-well {
+        width: $header-sm-height;
+        height: $header-sm-height;
         padding: 0;
         margin-right: 0;
-        width: $header-height;
-        height: $header-height;
-        position: relative;
+        border-width: 0;
+        position: absolute;
+        top: 0; right: 0;
 
         svg {
             width: 24px;
@@ -39,6 +68,69 @@
 
         &.collapsed:hover::before, &.collapsed:focus::before {
             background-color: $base-color;
+        }
+    }
+}
+
+.navbar-default {
+    border-color: transparent;
+
+    .navbar-toggle {
+        width: $header-sm-height;
+        height: $header-sm-height;
+        margin: 0 $header-sm-height 0 0;
+        padding: 0;
+        text-align: center;
+        border: none;
+        border-radius: 0;
+        background-color: $brand-color;
+
+        @include transition($default);
+
+        .icon-bar {
+            width: 24px;
+            height: 1px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #fff;
+        }
+
+        .icon-bar:not(:last-child) {
+            margin-bottom: 5px;
+        }
+
+        &.collapsed {
+            background-color: $brand-color;
+        }
+
+        &:hover, &:focus {
+            background-color: $base-color;
+        }
+    }
+}
+
+@media (min-width: $screen-sm-min) {
+    .btn {
+        &.btn-well {
+            width: $header-lg-height;
+            height: $header-lg-height;
+            right: 15px;
+        }
+    }
+
+    .navbar-default {
+        .navbar-toggle {
+            width: $header-lg-height;
+            height: $header-lg-height;
+            margin: 0 $header-lg-height 0 0;
+
+            .icon-bar {
+                width: 36px;
+            }
+
+            .icon-bar:not(:last-child) {
+                margin-bottom: 10px;
+            }
         }
     }
 }

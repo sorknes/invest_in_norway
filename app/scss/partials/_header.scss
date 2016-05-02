@@ -1,8 +1,8 @@
 header {
     width: auto;
-    height: $header-height;
+    height: $header-sm-height;
     position: fixed;
-    top: 0; right: 5px; left: 5px;
+    top: 0; right: 0; left: 0;
     z-index: 200;
 
     @include transition($default);
@@ -12,22 +12,26 @@ header {
     }
 }
 
+.navbar-header {
+    background-color: #fff;
+}
+
 .navbar {
     text-transform: uppercase;
     border: none;
     border-radius: 0;
 
     &.navbar-default {
-        height: $header-height;
-        background-color: rgba(255, 255, 255, 0);
+        height: $header-sm-height;
+        background-color: transparent;
 
         .navbar-brand {
-            height: $header-height;
+            height: $header-sm-height;
             padding: 0 20px;
             margin-left: 0;
             color: rgba(255, 255, 255, 0.50);
-            font-size: 24px;
-            line-height: $header-height;
+            font-size: 18px;
+            line-height: $header-sm-height;
             letter-spacing: 1px;
             text-transform: none;
             background-color: $brand-color;
@@ -71,33 +75,89 @@ header {
                 }
 
                 .dropdown-menu {
+                    padding: 0;
+                    font-size: inherit;
                     border: none;
                     border-radius: 0;
                     box-shadow: none;
+
+                    & > li > a {
+                        padding: 10px 30px;
+                        font-weight: $base-regular;
+
+                        &:hover, &:focus {
+                            color: #fff;
+                            background-color: $accent-color;
+                        }
+                    }
                 }
             }
         }
     }
 
     .well {
+        padding: 60px 0;
         border: none;
         border-radius: 0;
         box-shadow: none;
         background-color: $base-color;
+
+        .input-group {
+
+            .form-control {
+                width: 98%;
+                padding: 20px 10px 21px 10px;
+                color: #fff;
+                font-size: 24px;
+                font-weight: $base-regular;
+                border: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+                border-radius: 0;
+                box-shadow: none;
+                background-color: transparent;
+
+                &:focus {
+                    border-bottom-color: rgba(255, 255, 255, 1);
+                }
+            }
+        }
     }
 }
 
+.nav-up {
+    top: -$header-sm-height;
+}
+
 @media (min-width: $screen-sm-min) {
+    header {
+        top: 0; right: 5px; left: 5px;
+    }
+
+    .navbar {
+        &.navbar-default {
+            .navbar-brand {
+                height: $header-lg-height;
+                font-size: 24px;
+                line-height: $header-lg-height;
+            }
+        }
+    }
+}
+
+// Style large nav after new breakpoint
+@media (min-width: $navbar-break) {
     .navbar {
         &.navbar-default {
             .navbar-collapse {
+                padding: 0;
+
                 .navbar-nav {
-                    margin: 0;
+                    margin: 0 $header-lg-height 0 0;
                 }
 
                 .navbar-nav > li > a {
-                    height: $header-height;
-                    line-height: $header-height;
+                    height: $header-lg-height;
+                    line-height: $header-lg-height;
                 }
 
                 .navbar-nav > li:not(:last-child) > a::after {
@@ -114,6 +174,39 @@ header {
     }
 }
 
-.nav-up {
-    top: -$header-height;
+// Change breakpoint bootstrap nav
+@media (max-width: $navbar-break) {
+    .navbar-header {
+        float: none;
+    }
+
+    .navbar-left, .navbar-right {
+        // float: none !important;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+
+    .navbar-nav {
+        float: none!important;
+		margin-top: 7.5px;
+
+        & > li {
+            float: none;
+
+            & > a {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+	}
+
+    .collapse.in {
+  		display:block !important;
+	}
 }
