@@ -11,6 +11,4 @@ node_modules/
 
 # OSX generated files
 .DS_Store
-*.png
 *.sql
-*.jpg
