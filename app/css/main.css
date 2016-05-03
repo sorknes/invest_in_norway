@@ -6105,16 +6105,16 @@ header {
       margin-top: -1px; }
 
 @media (min-width: 768px) {
+  .jumbo-wrapper .jumbotron .content {
+    padding: 10px 0 60px 40px;
+    margin-top: 80px;
+    text-align: left; } }
+
+@media (min-width: 992px) {
   .jumbo-wrapper {
     height: 75%; }
     .jumbo-wrapper .jumbotron .content {
-      padding: 10px 0 60px 40px;
-      margin-top: 80px;
-      text-align: left; } }
-
-@media (min-width: 992px) {
-  .jumbo-wrapper .jumbotron .content {
-    margin-top: 80px; } }
+      margin-top: 80px; } }
 
 .grid-item {
   margin-bottom: 20px; }
