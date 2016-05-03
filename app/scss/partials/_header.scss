@@ -21,16 +21,21 @@ header {
     border: none;
     border-radius: 0;
 
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     &.navbar-default {
         height: $header-sm-height;
         background-color: transparent;
 
         .navbar-brand {
             height: $header-sm-height;
-            padding: 0 20px;
-            margin-left: 0;
+            padding: 0 10px;
+            margin-left: 15px;
             color: rgba(255, 255, 255, 0.50);
-            font-size: 18px;
+            font-size: 16px;
             line-height: $header-sm-height;
             letter-spacing: 1px;
             text-transform: none;
@@ -53,16 +58,23 @@ header {
             background-color: #fff;
 
             .navbar-nav {
+                margin: 0;
+
                 & > li > a {
-                    padding: 0 30px;
+                    padding: 10px;
                     color: $base-color;
                     font-size: 100%;
                     letter-spacing: 1px;
+                    border-bottom: 1px solid $base-color-25;
 
                     &:hover, &:focus {
                         color: $accent-color;
                         box-shadow: inset 0 -4px 0 0 $accent-color;
                     }
+                }
+
+                & > li:last-child > a {
+                    border-bottom: none;
                 }
 
                 & > .open > a {
@@ -96,7 +108,7 @@ header {
     }
 
     .well {
-        padding: 60px 0;
+        padding: 40px 0;
         border: none;
         border-radius: 0;
         box-shadow: none;
@@ -105,10 +117,10 @@ header {
         .input-group {
 
             .form-control {
-                width: 98%;
-                padding: 20px 10px 21px 10px;
+                width: 100%;
+                padding: 20px 10px 22px 10px;
                 color: #fff;
-                font-size: 24px;
+                font-size: 16px;
                 font-weight: $base-regular;
                 border: none;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.5);
@@ -129,18 +141,34 @@ header {
 }
 
 @media (min-width: $screen-sm-min) {
-    header {
-        top: 0; right: 5px; left: 5px;
-    }
-
     .navbar {
         &.navbar-default {
             .navbar-brand {
                 height: $header-lg-height;
+                padding: 0 30px;
+                margin-left: 0;
                 font-size: 24px;
                 line-height: $header-lg-height;
             }
+
+
         }
+
+        .well {
+            padding: 60px 0;
+
+            .input-group {
+                .form-control {
+                    width: 98%;
+                    padding: 20px 10px 25px 10px;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    .nav-up {
+        top: -$header-lg-height;
     }
 }
 
@@ -156,18 +184,20 @@ header {
                 }
 
                 .navbar-nav > li > a {
+                    padding: 0 30px;
                     height: $header-lg-height;
                     line-height: $header-lg-height;
+                    border: none;
                 }
 
-                .navbar-nav > li:not(:last-child) > a::after {
+                .navbar-nav > li > a::after {
                     width: 1px;
                     height: 30px;
                     margin-top: -15px;
                     content: '';
                     position: absolute;
                     top: 50%; right: 0px;
-                    background-color: $black-10;
+                    background-color: $base-color-25;
                 }
             }
         }
@@ -180,10 +210,6 @@ header {
         float: none;
     }
 
-    .navbar-left, .navbar-right {
-        // float: none !important;
-    }
-
     .navbar-toggle {
         display: block;
     }
@@ -194,7 +220,6 @@ header {
 
     .navbar-nav {
         float: none!important;
-		margin-top: 7.5px;
 
         & > li {
             float: none;

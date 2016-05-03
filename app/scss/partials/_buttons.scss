@@ -1,10 +1,9 @@
 .btn {
-    padding: 10px 40px 6px 40px;
-    font-size: 16px;
+    padding: 10px 15px 6px 15px;
     font-weight: $base-regular;
     text-decoration: none;
     letter-spacing: 2px;
-    border-width: 2px;
+    border-width: 4px;
     border-radius: 0;
     background-color: transparent;
 
@@ -21,8 +20,14 @@
         }
     }
 
+    &.btn-lg {
+        width: 100%;
+        padding: 20px 0;
+        font-size: 22px;
+    }
+
     &.btn-search {
-        margin-left: 20px;
+        margin-left: 0;
         color: #fff;
         border-color: #fff;
 
@@ -51,7 +56,7 @@
             height: 100%;
             position: absolute;
             top: 0; left: 0;
-            background-color: $brand-color;
+            background-color: #fff;
             background-position: center center;
             background-repeat: no-repeat;
             background-image: url('../images/svg/icon-search.svg');
@@ -68,6 +73,10 @@
 
         &.collapsed:hover::before, &.collapsed:focus::before {
             background-color: $base-color;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-image: url('../images/svg/icon-search-white.svg');
+            background-size: 24px 24px;
         }
     }
 }
@@ -76,31 +85,48 @@
     border-color: transparent;
 
     .navbar-toggle {
-        width: $header-sm-height;
+        width: auto;
         height: $header-sm-height;
-        margin: 0 $header-sm-height 0 0;
-        padding: 0;
+        margin: 0 75px 0 0;
+        padding: 0 20px;
         text-align: center;
         border: none;
         border-radius: 0;
-        background-color: $brand-color;
+        background-color: #fff;
 
         @include transition($default);
+
+        &:hover .navbar-menu, &:focus .navbar-menu {
+            color: #fff;
+        }
+
+        .navbar-menu {
+            text-transform: uppercase;
+            position: relative;;
+
+            @include transition($default);
+        }
 
         .icon-bar {
             width: 24px;
             height: 1px;
             margin-left: auto;
             margin-right: auto;
-            background-color: #fff;
+            background-color: $base-color;
+
+            @include transition($default);
         }
 
         .icon-bar:not(:last-child) {
             margin-bottom: 5px;
         }
 
+            &:hover .icon-bar, &:focus .icon-bar {
+                background-color: #fff;
+            }
+
         &.collapsed {
-            background-color: $brand-color;
+            // background-color: $brand-color;
         }
 
         &:hover, &:focus {
@@ -111,18 +137,26 @@
 
 @media (min-width: $screen-sm-min) {
     .btn {
+        padding: 10px 40px 6px 40px;
+        font-size: 16px;
+
         &.btn-well {
             width: $header-lg-height;
             height: $header-lg-height;
-            right: 15px;
         }
     }
 
     .navbar-default {
         .navbar-toggle {
-            width: $header-lg-height;
+            // width: $header-lg-height;
             height: $header-lg-height;
+            padding: 0 30px 0 80px;
             margin: 0 $header-lg-height 0 0;
+
+            .navbar-menu {
+                position: absolute;
+                left: 30px;
+            }
 
             .icon-bar {
                 width: 36px;

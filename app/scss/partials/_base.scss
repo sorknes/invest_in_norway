@@ -24,10 +24,7 @@ body {
     background-color: $black-5;
 }
 
-.page {
-    height: 75%;
-}
-
+// Links
 a {
     color: $base-color;
     text-decoration: underline;
@@ -36,5 +33,20 @@ a {
 
     &:hover, &:focus {
         color: $accent-color;
+    }
+}
+
+// Typography
+h1 {
+    text-transform: uppercase;
+}
+
+.no-gutter {
+    margin-right: 0;
+    margin-left: 0;
+
+    [class*="col-"] {
+        padding-right: 0;
+        padding-left: 0;
     }
 }

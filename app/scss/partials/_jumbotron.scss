@@ -1,11 +1,52 @@
-.jumbotron {
-    height: 100%;
-    background-color: #fff;
-    background-image: url('../images/hero-bg.jpg');
-    background-size: cover;
+.jumbo-wrapper {
+    height: 50%;
 
-    .container-fluid {
-        padding-left: 0;
-        padding-right: 0;
+    .jumbotron {
+        height: 100%;
+        background-color: #fff;
+        background-image: url('../images/hero-bg.jpg');
+        background-size: cover;
+
+        .content {
+            padding: 20px 30px;
+            margin-top: 50px;
+            text-align: center;;
+            background-color: #fff;
+        }
+
+        .btn-lg {
+            margin-top: -20px;
+            margin-bottom: -100px;
+            color: #fff;
+            background-color: $accent-color;
+
+            &:hover, &:focus {
+                border-color: $base-color;
+                background-color: $base-color;
+            }
+        }
+    }
+}
+
+@media (min-width: $screen-sm-min) {
+    .jumbo-wrapper {
+        .jumbotron {
+            .content {
+                text-align: left;
+                padding: 40px 50px;
+                margin-top: 80px;
+            }
+        }
+    }
+}
+
+
+@media (min-width: $screen-md-min) {
+    .jumbo-wrapper {
+        .jumbotron {
+            .content {
+                margin-top: 160px;
+            }
+        }
     }
 }
