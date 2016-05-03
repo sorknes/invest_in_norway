@@ -34,42 +34,43 @@ header {
             height: $header-sm-height;
             padding: 0 10px;
             margin-left: 15px;
-            color: rgba(255, 255, 255, 0.50);
-            font-size: 16px;
+            color: $base-color;
+            font-size: 18px;
             line-height: $header-sm-height;
             letter-spacing: 1px;
             text-transform: none;
-            background-color: $brand-color;
+            border-right: 1px solid $base-color-10;
 
             span {
-                color: rgba(255, 255, 255, 1);
                 font-weight: $base-bold;
                 text-transform: uppercase;
             }
 
             &:hover, &:focus {
-                background-color: $base-color;
+                // background-color: $base-color;
+                color: $brand-color;
             }
         }
 
         .navbar-collapse {
             border-top: none;
             box-shadow: none;
-            background-color: #fff;
+            background-color: $base-color;
 
             .navbar-nav {
-                margin: 0;
+                margin: 0 20px;
 
                 & > li > a {
-                    padding: 10px;
-                    color: $base-color;
-                    font-size: 100%;
+                    padding: 15px 30px;
+                    color: #fff;
+                    font-size: 14px;
+                    font-weight: $base-bold;
                     letter-spacing: 1px;
-                    border-bottom: 1px solid $base-color-25;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 
                     &:hover, &:focus {
                         color: $accent-color;
-                        box-shadow: inset 0 -4px 0 0 $accent-color;
+                        border-color: $accent-color;
                     }
                 }
 
@@ -94,8 +95,10 @@ header {
                     box-shadow: none;
 
                     & > li > a {
-                        padding: 10px 30px;
+                        padding: 10px 50px;
+                        color: rgba(255, 255, 255, 0.5);
                         font-weight: $base-regular;
+                        border-bottom: 1px dashed rgba(255, 255, 255, 0.25);
 
                         &:hover, &:focus {
                             color: #fff;
@@ -112,14 +115,14 @@ header {
         border: none;
         border-radius: 0;
         box-shadow: none;
-        background-color: $base-color;
+        background-color: #E8EAEB;
 
         .input-group {
 
             .form-control {
                 width: 100%;
                 padding: 20px 10px 22px 10px;
-                color: #fff;
+                color: $accent-color;
                 font-size: 16px;
                 font-weight: $base-regular;
                 border: none;
@@ -129,7 +132,7 @@ header {
                 background-color: transparent;
 
                 &:focus {
-                    border-bottom-color: rgba(255, 255, 255, 1);
+                    border-bottom-color: $accent-color;
                 }
             }
         }
@@ -151,7 +154,11 @@ header {
                 line-height: $header-lg-height;
             }
 
-
+            .navbar-collapse {
+                .navbar-nav {
+                    margin: 0 40px;
+                }
+            }
         }
 
         .well {
@@ -159,7 +166,6 @@ header {
 
             .input-group {
                 .form-control {
-                    width: 98%;
                     padding: 20px 10px 25px 10px;
                     font-size: 24px;
                 }
@@ -178,26 +184,25 @@ header {
         &.navbar-default {
             .navbar-collapse {
                 padding: 0;
+                background-color: #fff;
 
                 .navbar-nav {
                     margin: 0 $header-lg-height 0 0;
+
+                    .dropdown-menu {
+                        & > li > a {
+                            padding: 10px 30px;
+                            color: $base-color;
+                        }
+                    }
                 }
 
                 .navbar-nav > li > a {
-                    padding: 0 30px;
                     height: $header-lg-height;
+                    padding: 0 30px;
+                    color: $base-color;
                     line-height: $header-lg-height;
                     border: none;
-                }
-
-                .navbar-nav > li > a::after {
-                    width: 1px;
-                    height: 30px;
-                    margin-top: -15px;
-                    content: '';
-                    position: absolute;
-                    top: 50%; right: 0px;
-                    background-color: $base-color-25;
                 }
             }
         }
@@ -227,6 +232,18 @@ header {
             & > a {
                 padding-top: 10px;
                 padding-bottom: 10px;
+            }
+        }
+
+        .dropdown-menu {
+            background-color: transparent;
+        }
+
+        .open {
+            .dropdown-menu {
+                position: static;
+                float: none;
+                background-color: trasparent;
             }
         }
 	}

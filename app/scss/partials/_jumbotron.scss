@@ -1,5 +1,5 @@
 .jumbo-wrapper {
-    height: 50%;
+    height: 75%;
 
     .jumbotron {
         height: 100%;
@@ -8,21 +8,23 @@
         background-size: cover;
 
         .content {
-            padding: 20px 30px;
+            // padding: 20px 30px;
             margin-top: 50px;
             text-align: center;;
-            background-color: #fff;
+            color: #fff;
+            // background-color: #fff;
         }
 
         .btn-lg {
-            margin-top: -20px;
-            margin-bottom: -100px;
-            color: #fff;
-            background-color: $accent-color;
+            margin-top: 60px;
+            // margin-top: -20px;
+            // margin-bottom: -100px;
+            // color: #fff;
+            // background-color: $accent-color;
 
             &:hover, &:focus {
-                border-color: $base-color;
-                background-color: $base-color;
+                // border-color: $base-color;
+                // background-color: $base-color;
             }
         }
     }
@@ -33,7 +35,7 @@
         .jumbotron {
             .content {
                 text-align: left;
-                padding: 40px 50px;
+                // padding: 40px 50px;
                 margin-top: 80px;
             }
         }
@@ -45,7 +47,7 @@
     .jumbo-wrapper {
         .jumbotron {
             .content {
-                margin-top: 160px;
+                margin-top: 240px;
             }
         }
     }

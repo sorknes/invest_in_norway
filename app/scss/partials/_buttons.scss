@@ -21,17 +21,21 @@
     }
 
     &.btn-lg {
-        width: 100%;
+        // width: 100%;
+        width: 75%;
         padding: 20px 0;
+        margin: 0 auto;
+        float: none;
         font-size: 22px;
     }
 
     &.btn-search {
         margin-left: 0;
-        color: #fff;
-        border-color: #fff;
+        color: $accent-color;
+        border-color: $accent-color;
 
         &:hover, &:focus {
+            color: #fff;
             border-color: $accent-color;
         }
     }
@@ -44,6 +48,7 @@
         border-width: 0;
         position: absolute;
         top: 0; right: 0;
+        border-left: 1px solid $base-color-10;
 
         svg {
             width: 24px;
@@ -60,23 +65,19 @@
             background-position: center center;
             background-repeat: no-repeat;
             background-image: url('../images/svg/icon-search.svg');
-            background-size: 24px 24px;
+            background-size: 18px 18px;
             content: ' ';
 
             @include transition($default);
         }
 
         &::before {
-            background-color: $base-color;
+            background-color: $base-color-10;
             background-image: url('../images/svg/icon-close.svg');
         }
 
         &.collapsed:hover::before, &.collapsed:focus::before {
-            background-color: $base-color;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-image: url('../images/svg/icon-search-white.svg');
-            background-size: 24px 24px;
+            background-color: $base-color-10;
         }
     }
 }
@@ -143,6 +144,10 @@
         &.btn-well {
             width: $header-lg-height;
             height: $header-lg-height;
+
+            &.collapsed::before, &::before {
+                background-size: 24px 24px;
+            }
         }
     }
 
