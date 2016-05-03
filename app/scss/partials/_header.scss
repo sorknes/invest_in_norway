@@ -1,6 +1,7 @@
 header {
     width: auto;
     height: $header-sm-height;
+    font-family: $header-font-family;
     position: fixed;
     top: 0; right: 0; left: 0;
     z-index: 200;

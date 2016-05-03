@@ -5768,7 +5768,7 @@ body {
   padding: 0;
   margin: 0 0 60px 0;
   color: #1c2e36;
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Alegreya", serif;
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.5;
@@ -5780,6 +5780,10 @@ a {
   transition: all 300ms ease-in-out; }
   a:hover, a:focus {
     color: #ef5a3b; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400; }
 
 h1 {
   text-transform: uppercase; }
@@ -5797,6 +5801,7 @@ h1 {
 header {
   width: auto;
   height: 60px;
+  font-family: "Fira Sans", sans-serif;
   position: fixed;
   top: 0;
   right: 0;
@@ -5830,7 +5835,7 @@ header {
       text-transform: none;
       border-right: 1px solid rgba(28, 46, 54, 0.1); }
       .navbar.navbar-default .navbar-brand span {
-        font-weight: 500;
+        font-weight: 700;
         text-transform: uppercase; }
       .navbar.navbar-default .navbar-brand:hover, .navbar.navbar-default .navbar-brand:focus {
         color: #196495; }
@@ -5844,7 +5849,7 @@ header {
           padding: 15px 30px;
           color: #fff;
           font-size: 14px;
-          font-weight: 500;
+          font-weight: 700;
           letter-spacing: 1px;
           border-bottom: 1px solid rgba(255, 255, 255, 0.25); }
           .navbar.navbar-default .navbar-collapse .navbar-nav > li > a:hover, .navbar.navbar-default .navbar-collapse .navbar-nav > li > a:focus {
@@ -5963,7 +5968,8 @@ header {
 
 .btn {
   padding: 10px 15px 6px 15px;
-  font-weight: 300;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
   text-decoration: none;
   letter-spacing: 2px;
   border-width: 4px;
@@ -6100,8 +6106,7 @@ header {
 
 @media (min-width: 768px) {
   .jumbo-wrapper {
-    height: 75%;
-    margin-top: 20px; }
+    height: 75%; }
     .jumbo-wrapper .jumbotron .content {
       padding: 10px 0 60px 40px;
       margin-top: 80px;
