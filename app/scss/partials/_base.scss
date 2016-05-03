@@ -21,7 +21,7 @@ body {
     font-size: $base-font-size;
     font-weight: $base-regular;
     line-height: $base-line-height;
-    background-color: $black-5;
+    background-color: $base-color-10;
 }
 
 // Links
@@ -41,6 +41,13 @@ h1 {
     text-transform: uppercase;
 }
 
+.home {
+    h2 {
+        margin-top: 80px;
+    }
+}
+
+// Grid changes
 .no-gutter {
     margin-right: 0;
     margin-left: 0;

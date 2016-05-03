@@ -5772,7 +5772,7 @@ body {
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.5;
-  background-color: rgba(0, 0, 0, 0.05); }
+  background-color: rgba(28, 46, 54, 0.1); }
 
 a {
   color: #1c2e36;
@@ -5783,6 +5783,9 @@ a {
 
 h1 {
   text-transform: uppercase; }
+
+.home h2 {
+  margin-top: 80px; }
 
 .no-gutter {
   margin-right: 0;
@@ -5821,7 +5824,7 @@ header {
       padding: 0 10px;
       margin-left: 15px;
       color: #1c2e36;
-      font-size: 18px;
+      font-size: 16px;
       line-height: 60px;
       letter-spacing: 1px;
       text-transform: none;
@@ -5892,6 +5895,10 @@ header {
   top: -60px; }
 
 @media (min-width: 768px) {
+  header {
+    top: 0;
+    right: 20px;
+    left: 20px; }
   .navbar.navbar-default .navbar-brand {
     height: 100px;
     padding: 0 30px;
@@ -5920,7 +5927,7 @@ header {
         border: none; }
     .navbar.navbar-default .navbar-collapse .navbar-nav > li > a {
       height: 100px;
-      padding: 0 30px;
+      padding: 0 20px;
       color: #1c2e36;
       line-height: 100px;
       border: none; } }
@@ -5971,11 +5978,10 @@ header {
       color: #fff;
       background-color: #ef5a3b; }
   .btn.btn-lg, .btn-group-lg > .btn {
-    width: 75%;
-    padding: 20px 0;
+    padding: 10px 30px;
     margin: 0 auto;
     float: none;
-    font-size: 22px; }
+    font-size: 18px; }
   .btn.btn-search {
     margin-left: 0;
     color: #ef5a3b;
@@ -6052,6 +6058,9 @@ header {
   .btn {
     padding: 10px 40px 6px 40px;
     font-size: 16px; }
+    .btn.btn-lg, .btn-group-lg > .btn {
+      padding: 20px 50px;
+      font-size: 22px; }
     .btn.btn-well {
       width: 100px;
       height: 100px; }
@@ -6070,24 +6079,44 @@ header {
       margin-bottom: 10px; } }
 
 .jumbo-wrapper {
-  height: 75%; }
+  height: 100%; }
   .jumbo-wrapper .jumbotron {
     height: 100%;
     background-color: #fff;
     background-image: url("../images/hero-bg.jpg");
     background-size: cover; }
     .jumbo-wrapper .jumbotron .content {
-      margin-top: 50px;
+      padding: 30px 0 20px 10px;
+      margin-top: 30px;
       text-align: center;
-      color: #fff; }
+      color: #fff;
+      border-left: 1px solid #ef5a3b; }
+    .jumbo-wrapper .jumbotron .btn-lg-wrapper {
+      width: 100%;
+      text-align: right;
+      border-top: 1px solid #ef5a3b; }
     .jumbo-wrapper .jumbotron .btn-lg, .jumbo-wrapper .jumbotron .btn-group-lg > .btn {
-      margin-top: 60px; }
+      margin-top: -1px; }
 
 @media (min-width: 768px) {
-  .jumbo-wrapper .jumbotron .content {
-    text-align: left;
-    margin-top: 80px; } }
+  .jumbo-wrapper {
+    height: 75%;
+    margin-top: 20px; }
+    .jumbo-wrapper .jumbotron .content {
+      padding: 10px 0 60px 40px;
+      margin-top: 80px;
+      text-align: left; } }
 
 @media (min-width: 992px) {
   .jumbo-wrapper .jumbotron .content {
-    margin-top: 240px; } }
+    margin-top: 80px; } }
+
+.grid-item {
+  margin-bottom: 20px; }
+
+.grid-item-content {
+  height: 100px;
+  background-color: #fff; }
+
+.grid-item-content--height2 {
+  height: 200px; }

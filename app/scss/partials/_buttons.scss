@@ -21,12 +21,10 @@
     }
 
     &.btn-lg {
-        // width: 100%;
-        width: 75%;
-        padding: 20px 0;
+        padding: 10px 30px;
         margin: 0 auto;
         float: none;
-        font-size: 22px;
+        font-size: 18px;
     }
 
     &.btn-search {
@@ -140,6 +138,11 @@
     .btn {
         padding: 10px 40px 6px 40px;
         font-size: 16px;
+
+        &.btn-lg {
+            padding: 20px 50px;
+            font-size: 22px;
+        }
 
         &.btn-well {
             width: $header-lg-height;

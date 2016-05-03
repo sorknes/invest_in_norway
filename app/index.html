@@ -20,7 +20,7 @@
             <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
         <![endif]-->
     </head>
-    <body>
+    <body class="home">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -29,14 +29,14 @@
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <div class="navbar-menu">
+                            <div class="navbar-menu hidden-xs">
                                 Menu
                             </div>
-                            <span class="icon-bar hidden-xs"></span>
-                            <span class="icon-bar hidden-xs"></span>
-                            <span class="icon-bar hidden-xs"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#" title="Invest in Norway"><span>Invest</span><em>in</em><span>Norway</span></a>
+                        <a class="navbar-brand" href="#" title="Invest in Norway"><span>Investing</span><em>in</em><span>Norway</span></a>
                     </div> <!-- /. navbar-header -->
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
@@ -82,41 +82,54 @@
             <div class="jumbotron">
                 <div class="container">
                     <div class="row no-gutter">
-                        <div class="col-xs-12 col-sm-10 col-md-6">
+                        <div class="col-md-8 col-md-offset-2">
                             <div class="content">
                                 <h1>Minifacts about Norway 2015</h1>
                                 <p>Statistics Norway, SSB in short, has made this quick and easy summary for Norway at a glance.</p>
                             </div>
-                            <a class="btn btn-default btn-lg" href="#" role="button">Learn more</a>
+                            <div class="btn-lg-wrapper">
+                                <a class="btn btn-default btn-lg" href="#" role="button">Learn more</a>
+                            </div>
                         </div> <!-- /.col -->
                     </div> <!-- /.row -->
                 </div> <!-- /.container -->
             </div> <!-- /. umbotron -->
         </div> <!-- /.jumbo-wrapper -->
 
-        <div class="container">
-            <!-- Example row of columns -->
-            <!-- <div class="row">
-                <div class="col-md-4">
-                    <h2>Heading</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <h2 itemprop="headline">Our most important highlights</h2>
                 </div>
-                <div class="col-md-4">
-                    <h2>Heading</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <!-- add extra container element for Masonry -->
+            <div class="grid">
+                <div class="grid-sizer col-xs-2"></div>
+                <div class="grid-item col-xs-12 col-sm-8 col-md-6">
+                    <!-- add inner element for column content -->
+                    <div class="grid-item-content"></div>
                 </div>
-                <div class="col-md-4">
-                    <h2>Heading</h2>
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                <div class="grid-item col-xs-6 col-sm-4 col-md-2">
+                    <div class="grid-item-content"></div>
                 </div>
-            </div> -->
-
-            <hr>
+                <div class="grid-item col-xs-6 col-sm-4 col-md-2">
+                    <div class="grid-item-content grid-item-content--height2"></div>
+                </div>
+                <div class="grid-item col-xs-6 col-sm-4 col-md-2">
+                    <div class="grid-item-content"></div>
+                </div>
+                <div class="grid-item col-xs-6 col-sm-4 col-md-2">
+                    <div class="grid-item-content grid-item-content--height2"></div>
+                </div>
+                <div class="grid-item col-xs-6 col-sm-4 col-md-2">
+                    <div class="grid-item-content"></div>
+                </div>
+                <div class="grid-item col-xs-6 col-sm-4 col-md-2">
+                    <div class="grid-item-content"></div>
+                </div>
+            </div>
         </div>
-        <!-- /container -->
+        <!-- /.container-fluid -->
 
         <div style="height: 2000px;">
 
@@ -132,7 +145,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
         <!-- build:js js/main.min.js -->
-        <script src="js/plugins.js"></script>
+        <script src="js/vendor/isotope.pkgd.min.js"></script>
         <script src="js/main.js"></script>
 
         <script>

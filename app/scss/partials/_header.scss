@@ -35,7 +35,7 @@ header {
             padding: 0 10px;
             margin-left: 15px;
             color: $base-color;
-            font-size: 18px;
+            font-size: 16px;
             line-height: $header-sm-height;
             letter-spacing: 1px;
             text-transform: none;
@@ -144,6 +144,10 @@ header {
 }
 
 @media (min-width: $screen-sm-min) {
+header {
+    top: 0; right: 20px; left: 20px;
+}
+
     .navbar {
         &.navbar-default {
             .navbar-brand {
@@ -200,7 +204,7 @@ header {
 
                 .navbar-nav > li > a {
                     height: $header-lg-height;
-                    padding: 0 30px;
+                    padding: 0 20px;
                     color: $base-color;
                     line-height: $header-lg-height;
                     border: none;

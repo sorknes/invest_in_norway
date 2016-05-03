@@ -1,5 +1,5 @@
 .jumbo-wrapper {
-    height: 75%;
+    height: 100%;
 
     .jumbotron {
         height: 100%;
@@ -8,35 +8,35 @@
         background-size: cover;
 
         .content {
-            // padding: 20px 30px;
-            margin-top: 50px;
+            padding: 30px 0 20px 10px;
+            margin-top: 30px;
             text-align: center;;
             color: #fff;
-            // background-color: #fff;
+            border-left: 1px solid $accent-color;
+        }
+
+        .btn-lg-wrapper {
+            width: 100%;
+            text-align: right;
+            border-top: 1px solid $accent-color;
         }
 
         .btn-lg {
-            margin-top: 60px;
-            // margin-top: -20px;
-            // margin-bottom: -100px;
-            // color: #fff;
-            // background-color: $accent-color;
-
-            &:hover, &:focus {
-                // border-color: $base-color;
-                // background-color: $base-color;
-            }
+            margin-top: -1px;
         }
     }
 }
 
 @media (min-width: $screen-sm-min) {
     .jumbo-wrapper {
+        height: 75%;
+        margin-top: 20px;
+
         .jumbotron {
             .content {
-                text-align: left;
-                // padding: 40px 50px;
+                padding: 10px 0 60px 40px;
                 margin-top: 80px;
+                text-align: left;
             }
         }
     }
@@ -47,7 +47,7 @@
     .jumbo-wrapper {
         .jumbotron {
             .content {
-                margin-top: 240px;
+                margin-top: 80px;
             }
         }
     }
