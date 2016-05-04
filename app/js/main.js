@@ -37,10 +37,21 @@ function hasScrolled() {
     lastScrollTop = st;
 }
 
+$('a[href^="#"]').on('click', function(event) {
+    var target = $($(this).attr('href'));
+
+    if (target.length) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+});
+
 $('.grid').isotope({
-  itemSelector: '.grid-item',
-  percentPosition: true,
-  masonry: {
-    columnWidth: '.grid-sizer'
-  }
+    itemSelector: '.grid-item',
+    percentPosition: true,
+    masonry: {
+        columnWidth: '.grid-sizer'
+    }
 });
