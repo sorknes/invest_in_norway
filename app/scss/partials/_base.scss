@@ -42,14 +42,12 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: $header-font-weight;
 }
 
-h1 {
+h1, h2 {
     text-transform: uppercase;
 }
 
-.home {
-    h2 {
-        margin-top: 80px;
-    }
+.section-title {
+    margin-top: 80px;
 }
 
 // Grid changes

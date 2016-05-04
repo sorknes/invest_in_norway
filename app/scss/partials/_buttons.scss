@@ -8,7 +8,7 @@
     border-radius: 0;
     background-color: transparent;
 
-    @include transition($instant);
+    @include transition($default);
 
     &.btn-default {
         color: $accent-color;

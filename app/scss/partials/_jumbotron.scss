@@ -1,16 +1,41 @@
 .jumbo-wrapper {
     height: 100%;
+    position: relative;
+
+    .arrow-down {
+        position: absolute;
+        margin-left: -9px;
+        bottom: 10px; left: 50%;
+
+        svg {
+            width: 18px;
+            height: 9.6px;
+            fill: $accent-color;
+
+            @include transition($default);
+        }
+
+        &:hover {
+            bottom: 10px;
+        }
+
+        &:hover svg, &:focus svg {
+            fill: rgba(255, 255, 255, 1);
+        }
+    }
 
     .jumbotron {
         height: 100%;
+        display: flex;
+        align-items: center;
         background-color: #fff;
         background-image: url('../images/hero-bg.jpg');
         background-size: cover;
 
         .content {
-            padding: 30px 0 20px 10px;
-            margin-top: 30px;
-            text-align: center;;
+            padding: 20px 0 20px 10px;
+            margin-top: 20px;
+            text-align: center;
             color: #fff;
             border-left: 1px solid $accent-color;
         }
@@ -29,24 +54,34 @@
 
 @media (min-width: $screen-sm-min) {
     .jumbo-wrapper {
+        height: 75%;
+
+        .arrow-down {
+            margin-left: -18px;
+            bottom: 20px;
+
+            svg {
+                width: 36px;
+                height: 19.7px;
+            }
+        }
+
         .jumbotron {
             .content {
                 padding: 10px 0 60px 40px;
-                margin-top: 80px;
                 text-align: left;
             }
         }
     }
 }
 
-
-@media (min-width: $screen-md-min) {
+@media (min-width: $screen-sm-min) {
     .jumbo-wrapper {
         height: 75%;
 
         .jumbotron {
-            .content {
-                margin-top: 80px;
+            h1 {
+                font-size: 73px;
             }
         }
     }

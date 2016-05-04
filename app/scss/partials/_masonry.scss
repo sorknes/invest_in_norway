@@ -1,10 +1,101 @@
-.grid-item {
-    margin-bottom: 20px;
+.grid {
+    margin-top: 40px;
+
+    [class*="col-"] {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .grid-item {
+        margin-bottom: 10px;
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+
+            .featured {
+                color: $accent-color;
+            }
+        }
+    }
+
+    .grid-item-content {
+        padding: 20px 10px 10px 10px;
+        position: relative;
+        background-color: #fff;
+
+        small {
+            padding: 5px 10px;
+            color: #fff;
+            font-family: $fixed-font-family;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: absolute;
+            top: 0; left: 0;
+            background-color: $accent-color;
+        }
+
+        h3 {
+            position: relative;
+
+            &::after {
+                width: 50px;
+                height: 1px;
+                content: '';
+                position: absolute;
+                bottom: -10px; left: 0;
+                background-color: $base-color-10;
+            }
+        }
+
+        p {
+            margin-top: 30px;
+        }
+
+        &.featured {
+            padding: 50px 20px 20px 20px;
+            color: #fff;
+            background-color: $base-color;
+
+            @include transition($default);
+
+            h2 {
+                margin-top: 0;
+                text-transform: uppercase;
+                position: relative;
+
+                &::after {
+                    width: 100px;
+                    height: 1px;
+                    content: '';
+                    position: absolute;
+                    bottom: -20px; left: 0;
+                    background-color: $accent-color;
+                }
+            }
+
+            p {
+                margin-top: 50px;
+                font-size: 18px;
+            }
+
+            p:last-child {
+                margin-top: 0;
+            }
+        }
+    }
 }
 
-.grid-item-content {
-    height: 100px;
-    background-color: #fff;
-}
+@media (min-width: $screen-sm-min) {
+    .grid {
+        .grid-item-content {
+            padding: 30px;
 
-.grid-item-content--height2 { height: 200px; }
+            &.featured {
+                padding: 80px 60px 60px 60px;
+            }
+        }
+    }
+}
