@@ -5807,7 +5807,6 @@ small {
   font-size: 80%; }
 
 .section-title {
-  width: 75%;
   padding-bottom: 0.625em;
   margin: 60px auto 0 auto;
   text-align: center;
@@ -5825,6 +5824,7 @@ small {
   small {
     font-size: 85%; }
   .section-title {
+    width: 75%;
     margin-top: 100px; } }
 
 @media (min-width: 1200px) {
@@ -6246,11 +6246,11 @@ header {
     letter-spacing: 2px;
     background-color: #ef5a3b; }
     .grid .grid-item-content small.real-estate {
-      padding-left: 3.75em;
+      padding-left: 3.625em;
       background-position: 1.25em;
       background-repeat: no-repeat;
       background-image: url("../images/svg/icon-real-estate-white.svg");
-      background-size: 16px 16px; }
+      background-size: 12px 12px; }
   .grid .grid-item-content h3 {
     margin: 1.25em 0.75em 0 0.75em;
     position: relative; }
@@ -6270,9 +6270,9 @@ header {
   .grid .grid-item-content .author {
     padding: 0.625em 0.625em 0 0.625em;
     margin: 3.125em 1.875em 0 1.875em;
-    color: rgba(28, 46, 54, 0.5);
-    font-size: 0.75em;
-    font-family: monospace;
+    color: #1c2e36;
+    font-size: 0.625em;
+    font-family: "Fira Sans", sans-serif;
     font-weight: 300;
     text-transform: uppercase;
     border-top: 1px solid rgba(28, 46, 54, 0.25); }
@@ -6313,6 +6313,9 @@ header {
       margin: 0 0.625em 0.625em; }
   .grid .grid-item-content {
     padding: 0 0 2.5em 0; }
+    .grid .grid-item-content small.real-estate {
+      padding-left: 3.75em;
+      background-size: 16px 16px; }
     .grid .grid-item-content .btn-s {
       margin-left: 3.125em; }
     .grid .grid-item-content .author {
