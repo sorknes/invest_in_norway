@@ -77,6 +77,8 @@
 
 @media (min-width: $screen-sm-min) {
     .jumbo-wrapper {
+        height: 75%;
+
         .jumbotron {
             h1 {
                 font-size: em(73px);
