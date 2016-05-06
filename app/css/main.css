@@ -6252,7 +6252,7 @@ header {
       background-image: url("../images/svg/icon-real-estate-white.svg");
       background-size: 16px 16px; }
   .grid .grid-item-content h3 {
-    margin: 1.25em 0.4375em 0 0.4375em;
+    margin: 1.25em 0.75em 0 0.75em;
     position: relative; }
     .grid .grid-item-content h3::after {
       width: 50px;
@@ -6263,13 +6263,13 @@ header {
       left: 0;
       background-color: rgba(28, 46, 54, 0.25); }
   .grid .grid-item-content p {
-    margin: 1.875em 0.625em 1.25em 0.625em; }
+    margin: 1.875em 1.25em 1.25em 1.25em; }
   .grid .grid-item-content .btn-s {
-    margin-left: 0.9375em;
+    margin-left: 1.875em;
     margin-top: 1.25em; }
   .grid .grid-item-content .author {
     padding: 0.625em 0.625em 0 0.625em;
-    margin: 3.125em 0.9375em 0 0.9375em;
+    margin: 3.125em 1.875em 0 1.875em;
     color: rgba(28, 46, 54, 0.5);
     font-size: 0.75em;
     font-family: monospace;
@@ -6281,7 +6281,7 @@ header {
     color: #fff;
     background-color: #1c2e36; }
     .grid .grid-item-content.featured h2 {
-      margin: 1.5625em 1.25em 0 1.25em;
+      margin: 1.5625em 0.9375em 0 0.9375em;
       text-transform: uppercase;
       position: relative; }
       .grid .grid-item-content.featured h2::after {
@@ -6293,14 +6293,14 @@ header {
         left: 0;
         background-color: #ef5a3b; }
     .grid .grid-item-content.featured p {
-      padding: 0 1.25em;
+      padding: 0 0.3125em;
       font-size: 1.125em; }
     .grid .grid-item-content.featured .btn-s {
-      margin-left: 3.4375em;
+      margin-left: 2.8125em;
       color: #fff;
       border-color: #fff; }
     .grid .grid-item-content.featured .author {
-      margin: 3.75em 3.75em 0 3.75em;
+      margin: 3.75em 2.8125em 0 2.8125em;
       color: #fff;
       border-color: #fff;
       opacity: 0.25; }

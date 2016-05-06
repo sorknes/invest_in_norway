@@ -81,7 +81,7 @@
         }
 
         h3 {
-            margin: em(20px) em(7px) 0 em(7px);
+            margin: em(20px) em(12px) 0 em(12px);
             position: relative;
 
             &::after {
@@ -95,17 +95,17 @@
         }
 
         p {
-            margin: em(30px) em(10px) em(20px) em(10px);
+            margin: em(30px) em(20px) em(20px) em(20px);
         }
 
         .btn-s {
-            margin-left: em(15px);
+            margin-left: em(30px);
             margin-top: em(20px);
         }
 
         .author {
             padding: em(10px) em(10px) 0 em(10px);
-            margin: em(50px) em(15px) 0 em(15px);
+            margin: em(50px) em(30px) 0 em(30px);
             color: $base-color-50;
             font-size: em(12px);
             font-family: $fixed-font-family;
@@ -120,7 +120,7 @@
             background-color: $base-color;
 
             h2 {
-                margin: em(25px) em(20px) 0 em(20px);
+                margin: em(25px) em(15px) 0 em(15px);
                 text-transform: uppercase;
                 position: relative;
 
@@ -135,18 +135,18 @@
             }
 
             p {
-                padding: 0 em(20px);
+                padding: 0 em(5px);
                 font-size: em(18px);
             }
 
             .btn-s {
-                margin-left: em(55px);
+                margin-left: em(45px);
                 color: #fff;
                 border-color: #fff;
             }
 
             .author {
-                margin: em(60px) em(60px) 0 em(60px);
+                margin: em(60px) em(45px) 0 em(45px);
                 color: #fff;
                 border-color: #fff;
                 opacity: 0.25;
