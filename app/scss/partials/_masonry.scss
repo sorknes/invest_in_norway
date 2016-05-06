@@ -67,6 +67,8 @@
             font-family: $fixed-font-family;
             text-transform: uppercase;
             letter-spacing: 2px;
+            position: relative;
+            top: -2px;
             background-color: $accent-color;
 
             &.real-estate {
@@ -170,6 +172,8 @@
             padding: 0 0 em(40px) 0;
 
             small {
+                top: 0;
+
                 &.real-estate {
                     padding-left: em(60px);
                     background-size: 16px 16px;
@@ -188,16 +192,16 @@
                 padding-bottom: em(50px);
 
                 h2 {
-                    margin: em(25px) em(30px) em(25px) em(30px);
+                    margin: em(25px) em(20px) em(25px) em(20px);
                 }
 
                 .btn-s {
                     margin-top: em(30px);
-                    margin-left: em(90px);
+                    margin-left: em(60px);
                 }
 
                 .author {
-                    margin: em(70px) em(90px) 0 em(90px);
+                    margin: em(70px) em(60px) 0 em(60px);
                 }
             }
 

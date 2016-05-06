@@ -6243,6 +6243,8 @@ header {
     font-family: monospace;
     text-transform: uppercase;
     letter-spacing: 2px;
+    position: relative;
+    top: -2px;
     background-color: #ef5a3b; }
     .grid .grid-item-content small.real-estate {
       padding-left: 3.625em;
@@ -6312,9 +6314,11 @@ header {
       margin: 0 0.625em 0.625em; }
   .grid .grid-item-content {
     padding: 0 0 2.5em 0; }
-    .grid .grid-item-content small.real-estate {
-      padding-left: 3.75em;
-      background-size: 16px 16px; }
+    .grid .grid-item-content small {
+      top: 0; }
+      .grid .grid-item-content small.real-estate {
+        padding-left: 3.75em;
+        background-size: 16px 16px; }
     .grid .grid-item-content .btn-s {
       margin-left: 3.125em; }
     .grid .grid-item-content .author {
@@ -6322,12 +6326,12 @@ header {
     .grid .grid-item-content.featured {
       padding-bottom: 3.125em; }
       .grid .grid-item-content.featured h2 {
-        margin: 1.5625em 1.875em 1.5625em 1.875em; }
+        margin: 1.5625em 1.25em 1.5625em 1.25em; }
       .grid .grid-item-content.featured .btn-s {
         margin-top: 1.875em;
-        margin-left: 5.625em; }
+        margin-left: 3.75em; }
       .grid .grid-item-content.featured .author {
-        margin: 4.375em 5.625em 0 5.625em; }
+        margin: 4.375em 3.75em 0 3.75em; }
     .grid .grid-item-content h3 {
       margin: 1.25em 1.25em 0 1.25em; }
     .grid .grid-item-content p {
