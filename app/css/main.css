@@ -6083,8 +6083,7 @@ header {
       background-repeat: no-repeat;
       background-image: url("../images/svg/icon-search.svg");
       background-size: 24px 24px;
-      content: ' ';
-      transition: all 100ms ease-in-out; }
+      content: ' '; }
     .btn.btn-well::before {
       background-color: rgba(28, 46, 54, 0.1);
       background-image: url("../images/svg/icon-close.svg"); }
