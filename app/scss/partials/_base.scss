@@ -74,10 +74,12 @@ small {
 }
 
 .section-title {
+    width: 75%;
     padding-bottom: em(10px);
-    margin-top: $header-sm-height;
+    margin: $header-sm-height auto 0 auto;
     text-align: center;
-    border-bottom: 1px solid $accent-color;
+    font-size: em(18px);
+    border-bottom: 1px solid $base-color-25;
 }
 
 // Grid changes

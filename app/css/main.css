@@ -5809,10 +5809,12 @@ small {
   font-size: 80%; }
 
 .section-title {
+  width: 75%;
   padding-bottom: 0.625em;
-  margin-top: 60px;
+  margin: 60px auto 0 auto;
   text-align: center;
-  border-bottom: 1px solid #ef5a3b; }
+  font-size: 1.125em;
+  border-bottom: 1px solid rgba(28, 46, 54, 0.25); }
 
 .no-gutter {
   margin-right: 0;
@@ -6204,13 +6206,12 @@ header {
     font-size: 4.5625em; } }
 
 .filter {
-  padding: 0 1.25em;
   margin: 1.875em 0;
-  text-align: center;
+  text-align: left;
   font-family: "Fira Sans", sans-serif;
   font-weight: 300; }
   .filter span {
-    margin: 0 0.625em; }
+    margin: 0 0.3125em 0.625em; }
 
 .grid [class*="col-"] {
   padding-left: 0.3125em;
@@ -6307,6 +6308,11 @@ header {
       opacity: 0.25; }
 
 @media (min-width: 768px) {
+  .filter {
+    padding: 0 1.25em;
+    text-align: center; }
+    .filter span {
+      margin: 0 0.625em 0.625em; }
   .grid .grid-item-content {
     padding: 0 0 2.5em 0; }
     .grid .grid-item-content .btn-s {
