@@ -64,11 +64,11 @@
         top: 0; right: 0;
         border-left: 1px solid $base-color-10;
 
-        svg {
-            width: 24px;
-            height: 24px;
-            fill: #fff;
-        }
+        // svg {
+        //     width: 24px;
+        //     height: 24px;
+        //     fill: #fff;
+        // }
 
         &.collapsed::before, &::before {
             width: 100%;
@@ -81,11 +81,14 @@
             background-image: url('../images/svg/icon-search.svg');
             background-size: 24px 24px;
             content: ' ';
+
+            @include transition($default);
         }
 
         &::before {
             background-color: $base-color-10;
             background-image: url('../images/svg/icon-close.svg');
+            background-size: 24px 24px;
         }
 
         &.collapsed:hover::before, &.collapsed:focus::before {
