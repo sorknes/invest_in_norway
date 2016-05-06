@@ -15,7 +15,6 @@ html {
 
 body {
     padding: 0;
-    margin: 0 0 $footer-height 0;
     color: $base-color;
     font-family: $base-font-family;
     font-size: $base-font-size;
@@ -46,8 +45,39 @@ h1, h2 {
     text-transform: uppercase;
 }
 
+h1 {
+    font-size: em(36px);
+}
+
+h2 {
+    font-size: em(30px);
+}
+
+h3 {
+    font-size: em(24px);
+}
+
+h4 {
+    font-size: em(18px);
+}
+
+h5 {
+    font-size: em(14px);
+}
+
+h6 {
+    font-size: em(12px);
+}
+
+small {
+    font-size: 80%;
+}
+
 .section-title {
-    margin-top: 80px;
+    padding-bottom: em(10px);
+    margin-top: $header-sm-height;
+    text-align: center;
+    border-bottom: 1px solid $base-color-25;
 }
 
 // Grid changes
@@ -58,5 +88,21 @@ h1, h2 {
     [class*="col-"] {
         padding-right: 0;
         padding-left: 0;
+    }
+}
+
+@media (min-width: $screen-sm-min) {
+    small {
+        font-size: 85%;
+    }
+
+    .section-title {
+        margin-top: $header-lg-height;
+    }
+}
+
+@media (min-width: $screen-lg-min) {
+    body {
+        font-size: $base-font-size-large;
     }
 }

@@ -33,7 +33,7 @@ header {
 
         .navbar-brand {
             height: $header-sm-height;
-            padding: 0 10px;
+            padding: 0 em(10px);
             margin-left: 15px;
             color: $base-color;
             font-size: 16px;
@@ -59,12 +59,12 @@ header {
             background-color: $base-color;
 
             .navbar-nav {
-                margin: 0 20px;
+                margin: 0 em(20px);
 
                 & > li > a {
-                    padding: 15px 30px;
+                    padding: em(15px) em(30px);
                     color: #fff;
-                    font-size: 14px;
+                    font-size: em(12px);
                     font-weight: $base-bold;
                     letter-spacing: 1px;
                     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
@@ -76,6 +76,7 @@ header {
                 }
 
                 & > li:last-child > a {
+                    margin-right: 15px;
                     border-bottom: none;
                 }
 
@@ -96,9 +97,10 @@ header {
                     box-shadow: none;
 
                     & > li > a {
-                        padding: 10px 50px;
+                        padding: em(10px) em(50px);
                         color: rgba(255, 255, 255, 0.5);
-                        font-weight: $base-regular;
+                        font-size: em(14px);
+                        font-weight: $header-regular;
                         border-bottom: 1px dashed rgba(255, 255, 255, 0.25);
 
                         &:hover, &:focus {
@@ -112,7 +114,7 @@ header {
     }
 
     .well {
-        padding: 40px 0;
+        padding: em(40px) 0;
         border: none;
         border-radius: 0;
         box-shadow: none;
@@ -122,10 +124,10 @@ header {
 
             .form-control {
                 width: 100%;
-                padding: 20px 10px 22px 10px;
+                padding: em(20px) em(10px) em(22px) em(10px);
                 color: $accent-color;
-                font-size: 16px;
-                font-weight: $base-regular;
+                font-size: 1rem;
+                font-weight: $header-regular;
                 border: none;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.5);
                 border-radius: 0;
@@ -145,34 +147,34 @@ header {
 }
 
 @media (min-width: $screen-sm-min) {
-header {
-    top: 0; right: 20px; left: 20px;
-}
+    header {
+        top: 0; right: em(20px); left: em(20px);
+    }
 
     .navbar {
         &.navbar-default {
             .navbar-brand {
                 height: $header-lg-height;
-                padding: 0 30px;
+                padding: 0 em(30px);
                 margin-left: 0;
-                font-size: 24px;
+                font-size: em(24px);
                 line-height: $header-lg-height;
             }
 
             .navbar-collapse {
                 .navbar-nav {
-                    margin: 0 40px;
+                    margin: 0 em(40px);
                 }
             }
         }
 
         .well {
-            padding: 60px 0;
+            padding: em(60px) 0;
 
             .input-group {
                 .form-control {
-                    padding: 20px 10px 25px 10px;
-                    font-size: 24px;
+                    padding: em(15px) em(10px) em(15px) em(10px);
+                    font-size: em(24px);
                 }
             }
         }
@@ -180,6 +182,28 @@ header {
 
     .nav-up {
         top: -$header-lg-height;
+    }
+}
+
+@media (min-width: $screen-lg-min) {
+    .navbar {
+        &.navbar-default {
+            .navbar-collapse {
+                .navbar-nav {
+                    & > li > a {
+                        font-size: em(14px);
+                    }
+                }
+            }
+        }
+
+        .well {
+            .input-group {
+                .form-control {
+                    padding: em(12px) em(10px) em(12px) em(10px);
+                }
+            }
+        }
     }
 }
 
@@ -196,7 +220,7 @@ header {
 
                     .dropdown-menu {
                         & > li > a {
-                            padding: 10px 30px;
+                            padding: em(10px) em(30px);
                             color: $base-color;
                             border: none;
                         }
@@ -205,7 +229,7 @@ header {
 
                 .navbar-nav > li > a {
                     height: $header-lg-height;
-                    padding: 0 20px;
+                    padding: 0 em(20px);
                     color: $base-color;
                     line-height: $header-lg-height;
                     border: none;
@@ -236,8 +260,8 @@ header {
             float: none;
 
             & > a {
-                padding-top: 10px;
-                padding-bottom: 10px;
+                padding-top: em(10px);
+                padding-bottom: em(10px);
             }
         }
 

@@ -1,5 +1,5 @@
 .btn {
-    padding: 10px 15px 6px 15px;
+    padding: em(10px) em(15px) em(6px) em(15px);
     font-family: $header-font-family;
     font-weight: $header-bold;
     text-decoration: none;
@@ -21,11 +21,26 @@
         }
     }
 
+    &.btn-s {
+        padding: em(10px) em(15px) em(6px) em(15px);
+        color: $base-color;
+        font-size: em(10px);
+        font-weight: $header-regular;
+        text-transform: uppercase;
+        border-width: 1px;
+        border-color: $base-color;
+
+        &:hover, &:focus {
+            color: #fff;
+            background-color: $base-color;
+        }
+    }
+
     &.btn-lg {
-        padding: 10px 30px;
+        padding: em(10px) em(25px);
         margin: 0 auto;
         float: none;
-        font-size: 18px;
+        font-size: em(18px);
     }
 
     &.btn-search {
@@ -64,10 +79,10 @@
             background-position: center center;
             background-repeat: no-repeat;
             background-image: url('../images/svg/icon-search.svg');
-            background-size: 18px 18px;
+            background-size: 24px 24px;
             content: ' ';
 
-            @include transition($default);
+            @include transition($instant);
         }
 
         &::before {
@@ -87,8 +102,8 @@
     .navbar-toggle {
         width: auto;
         height: $header-sm-height;
-        margin: 0 75px 0 0;
-        padding: 0 20px;
+        margin: 0 em(75px) 0 0;
+        padding: 0 em(20px);
         text-align: center;
         border: none;
         border-radius: 0;
@@ -137,21 +152,17 @@
 
 @media (min-width: $screen-sm-min) {
     .btn {
-        padding: 10px 40px 6px 40px;
-        font-size: 16px;
+        padding: em(10px) em(40px) em(6px) em(40px);
+        font-size: 1rem;
 
         &.btn-lg {
-            padding: 20px 50px;
-            font-size: 22px;
+            padding: em(15px) em(40px);
+            font-size: em(22px);
         }
 
         &.btn-well {
             width: $header-lg-height;
             height: $header-lg-height;
-
-            &.collapsed::before, &::before {
-                background-size: 24px 24px;
-            }
         }
     }
 
@@ -159,12 +170,12 @@
         .navbar-toggle {
             // width: $header-lg-height;
             height: $header-lg-height;
-            padding: 0 30px 0 80px;
+            padding: 0 em(30px) 0 em(80px);
             margin: 0 $header-lg-height 0 0;
 
             .navbar-menu {
                 position: absolute;
-                left: 30px;
+                left: em(30px);
             }
 
             .icon-bar {

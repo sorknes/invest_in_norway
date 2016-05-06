@@ -1,43 +1,88 @@
+.filter {
+    padding: 0 em(20px);
+    margin: em(30px) 0;
+    text-align: center;
+    font-family: $header-font-family;
+    font-weight: $header-regular;
+
+    span {
+        margin: 0 em(10px);
+    }
+}
+
 .grid {
-    margin-top: 40px;
+    // margin-top: $header-sm-height;
 
     [class*="col-"] {
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: em(5px);
+        padding-right: em(5px);
     }
 
     .grid-item {
-        margin-bottom: 10px;
+        margin-bottom: em(10px);
 
         a {
             text-decoration: none;
         }
 
-        a:hover {
+        a:hover, a:focus {
+            color: $base-color;
+
+            .grid-item-content {
+                box-shadow: 0 0 20px $base-color-25;
+            }
 
             .featured {
-                color: $accent-color;
+                box-shadow: 0 0 20px $base-color-50;
+
+                small {
+                    background-color: $accent-color;
+                }
+
+                .btn-s {
+                    border-color: $accent-color;
+                    background-color: $accent-color;
+                }
+            }
+
+            // small {
+            //     background-color: $base-color;
+            // }
+
+            .btn-s {
+                color: #fff;
+                background-color: $base-color;
             }
         }
     }
 
     .grid-item-content {
-        padding: 20px 10px 10px 10px;
-        position: relative;
+        padding: 0 0 em(10px) 0;
         background-color: #fff;
 
+        @include transition($default);
+
         small {
-            padding: 5px 10px;
+            padding: em(10px) em(15px);
             color: #fff;
             font-family: $fixed-font-family;
             text-transform: uppercase;
             letter-spacing: 2px;
-            position: absolute;
-            top: 0; left: 0;
             background-color: $accent-color;
+
+            // @include transition($default);
+
+            &.real-estate {
+                padding-left: em(60px);
+                background-position: em(20px);
+                background-repeat: no-repeat;
+                background-image: url('../images/svg/icon-real-estate-white.svg');
+                background-size: 16px 16px;
+            }
         }
 
         h3 {
+            margin: em(20px) em(7px) 0 em(7px);
             position: relative;
 
             &::after {
@@ -46,23 +91,37 @@
                 content: '';
                 position: absolute;
                 bottom: -10px; left: 0;
-                background-color: $base-color-10;
+                background-color: $base-color-25;
             }
         }
 
         p {
-            margin-top: 30px;
+            margin: em(30px) em(10px) em(20px) em(10px);
+        }
+
+        .btn-s {
+            margin-left: em(15px);
+            margin-top: em(20px);
+        }
+
+        .author {
+            padding: em(10px) em(10px) 0 em(10px);
+            margin: em(50px) em(15px) 0 em(15px);
+            color: $base-color-50;
+            font-size: em(12px);
+            font-family: $fixed-font-family;
+            font-weight: $header-regular;
+            text-transform: uppercase;
+            border-top: 1px solid $base-color-25;
         }
 
         &.featured {
-            padding: 50px 20px 20px 20px;
+            padding: 0 0 em(30px) 0;
             color: #fff;
             background-color: $base-color;
 
-            @include transition($default);
-
             h2 {
-                margin-top: 0;
+                margin: em(25px) em(20px) 0 em(20px);
                 text-transform: uppercase;
                 position: relative;
 
@@ -77,12 +136,21 @@
             }
 
             p {
-                margin-top: 50px;
-                font-size: 18px;
+                padding: 0 em(20px);
+                font-size: em(18px);
             }
 
-            p:last-child {
-                margin-top: 0;
+            .btn-s {
+                margin-left: em(55px);
+                color: #fff;
+                border-color: #fff;
+            }
+
+            .author {
+                margin: em(60px) em(60px) 0 em(60px);
+                color: #fff;
+                border-color: #fff;
+                opacity: 0.25;
             }
         }
     }
@@ -90,11 +158,42 @@
 
 @media (min-width: $screen-sm-min) {
     .grid {
+        // margin-top: $header-lg-height;
+
         .grid-item-content {
-            padding: 30px;
+            padding: 0 0 em(40px) 0;
+
+            .btn-s {
+                margin-left: em(50px);
+            }
+
+            .author {
+                margin: em(70px) em(50px) 0 em(50px);
+            }
 
             &.featured {
-                padding: 80px 60px 60px 60px;
+                padding-bottom: em(50px);
+
+                h2 {
+                    margin: em(25px) em(30px) em(25px) em(30px);
+                }
+
+                .btn-s {
+                    margin-top: em(30px);
+                    margin-left: em(90px);
+                }
+
+                .author {
+                    margin: em(70px) em(90px) 0 em(90px);
+                }
+            }
+
+            h3 {
+                margin: em(20px) em(20px) 0 em(20px);
+            }
+
+            p {
+                margin: em(30px) em(30px) em(10px) em(30px);
             }
         }
     }
